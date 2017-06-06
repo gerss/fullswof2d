@@ -56,6 +56,18 @@
 
 #include "scheme.hpp"
 
+//GPU kernels
+//__global__ void mass_equation (u,)
+//{
+//	int i = threadIdx.x + BSZ*blockIdx.x;
+//	int j = threadIdx.y + BSZ*blockIdx.y;
+//	int I = j*N + i;
+//
+//	if(I<Nx*Ny)
+//	{
+//		u_prev[I] = u[i]+1;
+//	}
+
 
 Scheme::Scheme(Parameters & par):NXCELL(par.get_Nxcell()),NYCELL(par.get_Nycell()),ORDER(par.get_order()),T(par.get_T()),NBTIMES(par.get_nbtimes()),SCHEME_TYPE(par.get_scheme_type()),DX(par.get_dx()),DY(par.get_dy()),CFL_FIX(par.get_cflfix()),DT_FIX(par.get_dtfix()),FRICCOEF(par.get_friccoef()),L_IMP_Q(par.get_left_imp_discharge()),L_IMP_H(par.get_left_imp_h()),R_IMP_Q(par.get_right_imp_discharge()),R_IMP_H(par.get_right_imp_h()),B_IMP_Q(par.get_bottom_imp_discharge()),B_IMP_H(par.get_bottom_imp_h()),T_IMP_Q(par.get_top_imp_discharge()),T_IMP_H(par.get_top_imp_h()){
   
