@@ -303,7 +303,7 @@ void Scheme:: maincalcscheme(TAB & he, TAB & ve1, TAB & ve2, TAB & qe1, TAB & qe
   }
 
 
-// I FOUND IT !!!
+// I FOUND IT !
   for (int i=1 ; i<NXCELL+1 ; i++){
     for (int j=1 ; j<NYCELL+1 ; j++){
       // Solution of the equation of mass conservation (First equation of Shallow-Water)
